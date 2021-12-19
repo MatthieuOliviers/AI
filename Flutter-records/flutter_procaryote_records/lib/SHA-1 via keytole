@@ -1,0 +1,21 @@
+matthieuoliviers@Matthieus-MacBook-Pro-1049 ~ % keytool -list -v \
+-alias androiddebugkey -keystore ~/.android/debug.keystore
+Enter keystore password:  
+Alias name: androiddebugkey
+Creation date: 19 Oct 2021
+Entry type: PrivateKeyEntry
+Certificate chain length: 1
+Certificate[1]:
+Owner: C=US, O=Android, CN=Android Debug
+Issuer: C=US, O=Android, CN=Android Debug
+Serial number: 1
+Valid from: Tue Oct 19 23:51:41 CEST 2021 until: Thu Oct 12 23:51:41 CEST 2051
+Certificate fingerprints:
+	 SHA1: 29:7D:DE:5A:FB:43:40:E6:E8:D3:73:1A:E4:2C:59:DC:FB:3E:80:AF
+	 SHA256: 93:18:F9:26:D0:DD:56:6B:27:0A:A4:62:A7:F0:7E:CA:08:25:EC:10:CD:8F:85:8C:7A:43:A7:AC:8D:EE:5D:ED
+Signature algorithm name: SHA1withRSA (weak)
+Subject Public Key Algorithm: 2048-bit RSA key
+Version: 1
+
+Warning:
+The certificate uses the SHA1withRSA signature algorithm which is considered a security risk. This algorithm will be disabled in a future update.

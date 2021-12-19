@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "358029438538",
+    "project_id": "procaryote-1",
+    "storage_bucket": "procaryote-1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:358029438538:android:fc6a4ddbc51e5498cd00b3",
+        "android_client_info": {
+          "package_name": "com.procaryote.healthbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "358029438538-l4h86aabdrab31nuikod18shjkumckpv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB3RTIoOgXvL-6O1aQhrN4FrAefydTpH08"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "358029438538-l4h86aabdrab31nuikod18shjkumckpv.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "358029438538-jamtq61jiehtpg733h3uu0u2ckp7gssl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.procaryote.healthbook"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

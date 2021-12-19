@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
+  <base href="$FLUTTER_BASE_HREF">
+
+  <meta charset="UTF-8">
+ 
+   <!-- For Authentification via Google:
+ -->
+ 
+  <meta name="google-signin-client_id"
+    content="358029438538-l4h86aabdrab31nuikod18shjkumckpv.apps.googleusercontent.com" />
+ 
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="flutter_procaryote_records">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <title>flutter_procaryote_records</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  <!-- This script is needed for the use of the Firebase database
+  these scripts into the bottom of your <body> tag, but before you use any Firebase services:
+ -->
+    <!-- Firebase Configuration -->
+    <!-- OUT - not need anymore with the CLI configuration https://firebase.flutter.dev/docs/manual-installation -->
+   <!-- 
+    WARNING: FlutterFire for Web is explicitly tested against Firebase JS SDK version "8.10.0"
+Connecting to VM Service at ws://127.0.0.1:63275/DZKqzO-occc=/ws
+💪 Running with sound null safety 💪
+Debug service listening on ws://127.0.0.1:63275/DZKqzO-occc=/ws
+This app is linked to the debug service: ws://127.0.0.1:63275/DZKqzO-occc%3D/ws
+Launching lib/main.dart on Chrome in debug mode...
+lib/main.dart:1
+Waiting for another flutter command to release the startup lock...
+                e.g. remove: <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+-->
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+
+<!-- 
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app-check.js"></script>
+   -->
+
+   <!-- 
+DON'T PUT AN INITIALIZATION IN THE SCRIPT ANYMORE IF YOU HAVE ONE WITHIN THE DART CODE
+
+    Error: [core/duplicate-app] A Firebase App named "[DEFAULT]" already exists
+    at Object.throw_ [as throw] (http://localhost:62405/dart_sdk.js:5061:11)
+at firebase_core_web.FirebaseCoreWeb.new.initializeApp (http://localhost:62405/packages/firebase_core_web/firebase_core_web.dart.lib.js:239:27)
+-->
+<!-- 
+   <script>
+    var firebaseConfig = {
+      apiKey: "AIzaSyDDmOwElAl8ploSqyIclTNkrNGtyG-SVJc",
+      authDomain: "procaryote-1.firebaseapp.com",
+      databaseURL: "https://procaryote-1.firebaseio.com",
+      projectId: "procaryote-1",
+      storageBucket: "procaryote-1.appspot.com",
+      messagingSenderId: "358029438538",
+      appId: "1:358029438538:web:ef04606b90715959cd00b3",
+      measurementId: "G-BY7VPVQTYQ",
+    };
+
+  // Initialize Firebase
+ firebase.initializeApp(firebaseConfig);
+</script>
+   -->
+
+
+
+<!-- 
+
+    <script>
+      var firebaseConfig = {
+        apiKey: "AIzaSyDDmOwElAl8ploSqyIclTNkrNGtyG-SVJc",
+        authDomain: "procaryote-1.firebaseapp.com",
+        databaseURL: "https://procaryote-1.firebaseio.com",
+        projectId: "procaryote-1",
+        storageBucket: "procaryote-1.appspot.com",
+        messagingSenderId: "358029438538",
+        appId: "1:358029438538:web:ef04606b90715959cd00b3",
+        measurementId: "G-BY7VPVQTYQ",
+      };
+
+    // Initialize Firebase
+   firebase.initializeApp(firebaseConfig);
+ </script>
+   -->
+
+<!-- 
+FACEBOOK - Log In SDK for Javascript
+   -->
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1:358029438538:web:ef04606b90715959cd00b3',
+      cookie     : true,
+      xfbml      : true,
+      version    : '1'
+    });
+      
+    FB.AppEvents.logPageView();   
+      
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "https://connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+<!-- 
+  THIS DOES NOT WORK: version should be 8.6.1
+  SEE https://firebase.flutter.dev/docs/installation/web
+  
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+
+
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+        apiKey: "AIzaSyDDmOwElAl8ploSqyIclTNkrNGtyG-SVJc",
+        authDomain: "procaryote-1.firebaseapp.com",
+        projectId: "procaryote-1",
+        storageBucket: "procaryote-1.appspot.com",
+        messagingSenderId: "358029438538",
+        appId: "1:358029438538:web:ef04606b90715959cd00b3",
+        measurementId: "G-BY7VPVQTYQ",
+      };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    </script>
+ -->
+    <!-- End of Firebase Configuration-->
+
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    var serviceWorkerVersion = null;
+    var scriptLoaded = false;
+    function loadMainDartJs() {
+      if (scriptLoaded) {
+        return;
+      }
+      scriptLoaded = true;
+      var scriptTag = document.createElement('script');
+      scriptTag.src = 'main.dart.js';
+      scriptTag.type = 'application/javascript';
+      document.body.append(scriptTag);
+    }
+
+    if ('serviceWorker' in navigator) {
+      // Service workers are supported. Use them.
+      window.addEventListener('load', function () {
+        // Wait for registration to finish before dropping the <script> tag.
+        // Otherwise, the browser will load the script multiple times,
+        // potentially different versions.
+        var serviceWorkerUrl = 'flutter_service_worker.js?v=' + serviceWorkerVersion;
+        navigator.serviceWorker.register(serviceWorkerUrl)
+          .then((reg) => {
+            function waitForActivation(serviceWorker) {
+              serviceWorker.addEventListener('statechange', () => {
+                if (serviceWorker.state == 'activated') {
+                  console.log('Installed new service worker.');
+                  loadMainDartJs();
+                }
+              });
+            }
+            if (!reg.active && (reg.installing || reg.waiting)) {
+              // No active web worker and we have installed or are installing
+              // one for the first time. Simply wait for it to activate.
+              waitForActivation(reg.installing || reg.waiting);
+            } else if (!reg.active.scriptURL.endsWith(serviceWorkerVersion)) {
+              // When the app updates the serviceWorkerVersion changes, so we
+              // need to ask the service worker to update.
+              console.log('New service worker available.');
+              reg.update();
+              waitForActivation(reg.installing);
+            } else {
+              // Existing service worker is still good.
+              console.log('Loading app from service worker.');
+              loadMainDartJs();
+            }
+          });
+
+        // If service worker doesn't succeed in a reasonable amount of time,
+        // fallback to plaint <script> tag.
+        setTimeout(() => {
+          if (!scriptLoaded) {
+            console.warn(
+              'Failed to load app from service worker. Falling back to plain <script> tag.',
+            );
+            loadMainDartJs();
+          }
+        }, 4000);
+      });
+    } else {
+      // Service workers not supported. Just drop the <script> tag.
+      loadMainDartJs();
+    }
+  </script>
+</body>
+</html>
