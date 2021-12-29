@@ -43,8 +43,7 @@ class DefaultFirebaseOptions {
     messagingSenderId: '358029438538',
     projectId: 'procaryote-1',
     authDomain: 'procaryote-1.firebaseapp.com',
-    databaseURL: "https://procaryote-1.firebaseio.com",
-//    databaseURL: 'https://procaryote-1-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL: 'https://procaryote-1-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'procaryote-1.appspot.com',
     measurementId: 'G-BY7VPVQTYQ',
   );
@@ -54,8 +53,7 @@ class DefaultFirebaseOptions {
     appId: '1:358029438538:android:0cfc551330317164cd00b3',
     messagingSenderId: '358029438538',
     projectId: 'procaryote-1',
-    databaseURL: "https://procaryote-1.firebaseio.com",
-//    databaseURL: 'https://procaryote-1-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL: 'https://procaryote-1-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'procaryote-1.appspot.com',
   );
 
@@ -64,11 +62,10 @@ class DefaultFirebaseOptions {
     appId: '1:358029438538:ios:07294703a535e117cd00b3',
     messagingSenderId: '358029438538',
     projectId: 'procaryote-1',
-    databaseURL: "https://procaryote-1.firebaseio.com",
-//    databaseURL: 'https://procaryote-1-default-rtdb.europe-west1.firebasedatabase.app',
+    databaseURL: 'https://procaryote-1-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'procaryote-1.appspot.com',
-    iosClientId:
-        '358029438538-jamtq61jiehtpg733h3uu0u2ckp7gssl.apps.googleusercontent.com',
+    androidClientId: '358029438538-pd7bla5941ucgd75svkb54liqdq52ddp.apps.googleusercontent.com',
+    iosClientId: '358029438538-jamtq61jiehtpg733h3uu0u2ckp7gssl.apps.googleusercontent.com',
     iosBundleId: 'com.procaryote.healthbook',
   );
 }
